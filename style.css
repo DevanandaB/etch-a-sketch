@@ -1,0 +1,9 @@
+.container {
+    border: 2px solid black;
+    width: 900px;
+    height: 660px;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
