@@ -1,36 +1,22 @@
-// const container = document.querySelector(".container");
-
-// function grid(num) {
-//     for(let i = 0; i < num; i++) {
-//         let div = document.createElement("div");
-//         div.style.border = "1px solid";
-//         div.style.width = "100%";
-//         div.style.height = "100%";
-//         container.appendChild(div);
-//     }
-// };
-
-// grid(16);
-
 const container = document.querySelector(".container");
-const hori = document.querySelector(".hori");
-const vert = document.querySelector(".vert");
 
 function grid(num) {
     for(let i = 0; i < num; i++) {
-        let div = document.createElement("div");
-        div.style.border = "1px solid";
-        div.style.width = "100%";
-        div.style.height = "100%";
-        hori.appendChild(div);
+        let row = document.createElement("div");
+        row.style.border = "1px solid black";
+        row.style.width = "100%";
+        row.className = "row";
+        container.appendChild(row); 
+        for(let j = 0; j < num; j++) {
+            let column = document.createElement("div");
+            column.style.border = "1px solid black";
+            column.style.width = "100%";
+            column.style.height = "100%";
+            column.className = "column";
+            row.appendChild(column);
     }
-    for(let i = 0; i < num; i++) {
-        let div2 = document.createElement("div");
-        div2.style.border = "1px solid";
-        div2.style.width = "100%";
-        div2.style.height = "100%";
-        vert.appendChild(div2);
-    }
+    }   
+    
 };
 
 grid(16);
