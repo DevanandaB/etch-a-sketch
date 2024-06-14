@@ -1,5 +1,6 @@
 const container = document.querySelector(".container");
 const clearBtn = document.querySelector("#clearBtn");
+const colorBtn = document.querySelector("#colorBtn");
 
 clearBtn.addEventListener("click", clear);
 
@@ -19,7 +20,15 @@ function grid(num) {
             function mouseOver() {
                 column.style.backgroundColor = "grey";
             }
+            function colorChange() {
+                let red = Math.floor(Math.random() * 256);
+                let green = Math.floor(Math.random() * 256);
+                let blue = Math.floor(Math.random() * 256);
+                let bgColor = `rgb(${red}, ${green}, ${blue})`;
+                column.style.backgroundColor = bgColor;
+            }
             column.addEventListener("mouseover", mouseOver);
+            colorBtn.addEventListener("click", function() {column.addEventListener("mouseover", colorChange)});
             row.appendChild(column);
     }
     }  
