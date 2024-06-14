@@ -1,6 +1,12 @@
+const heading = document.createElement("h1");
+heading.classList.add("heading");
+heading.textContent = "--Etch-a-sketch--"
+
 const container = document.querySelector(".container");
 const clearBtn = document.querySelector("#clearBtn");
 const colorBtn = document.querySelector("#colorBtn");
+
+document.body.insertBefore(heading, container);
 
 clearBtn.addEventListener("click", clear);
 
@@ -18,8 +24,14 @@ function grid(num) {
             column.style.height = "100%";
             column.className = "column";
             function mouseOver() {
-                column.style.backgroundColor = "grey";
-            }
+                let currOpacity = column.style.opacity;
+                column.style.backgroundColor = "black";
+                if(currOpacity) {
+                    column.style.opacity = Number(currOpacity) + 0.1;
+                } else {
+                    column.style.opacity = 0.1;
+                }
+            };
             function colorChange() {
                 let red = Math.floor(Math.random() * 256);
                 let green = Math.floor(Math.random() * 256);

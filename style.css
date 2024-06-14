@@ -1,12 +1,21 @@
 body {
     background-color: #C3B1E1;
 }
+.heading {
+    color: white;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 50px;
+}
 .container {
     border: 3px solid white;
     width: 980px;
     height: 690px;
     display: flex;
     flex-wrap: wrap;
+    position: relative;
+    margin: 50px;
+    left: 25px;
 }
 .row {
     display: flex;
@@ -27,7 +36,7 @@ body {
     margin: 10px;
     position: absolute;
     left: 1200px;
-    bottom: 500px;
+    bottom: 300px;
 }
 #colorBtn:hover {
     background-color: rgb(62, 150, 238);
@@ -46,7 +55,7 @@ body {
     margin: 10px;
     position: absolute;
     left: 1235px;
-    bottom: 400px;
+    bottom: 200px;
 }
 #clearBtn:hover {
     background-color: rgb(83, 218, 83);
