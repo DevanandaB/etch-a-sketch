@@ -1,5 +1,8 @@
+body {
+    background-color: #C3B1E1;
+}
 .container {
-    border: 2px solid black;
+    border: 3px solid white;
     width: 980px;
     height: 690px;
     display: flex;

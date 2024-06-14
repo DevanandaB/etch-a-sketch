@@ -9,12 +9,12 @@ function grid(num) {
         container.appendChild(row); 
         for(let j = 0; j < num; j++) {
             let column = document.createElement("div");
-            column.style.border = "1px solid grey";
+            column.style.border = "1px solid white";
             column.style.width = "100%";
             column.style.height = "100%";
             column.className = "column";
             function mouseOver() {
-                column.style.backgroundColor = "#C3B1E1";
+                column.style.backgroundColor = "grey";
             }
             column.addEventListener("mouseover", mouseOver);
             row.appendChild(column);
@@ -37,5 +37,3 @@ function promptUser() {
         grid(gridNum);
     }
 };
-
-
