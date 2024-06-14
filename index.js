@@ -1,4 +1,7 @@
 const container = document.querySelector(".container");
+const clearBtn = document.querySelector("#clearBtn");
+
+clearBtn.addEventListener("click", clear);
 
 function grid(num) {
     for(let i = 0; i < num; i++) {
@@ -22,7 +25,7 @@ function grid(num) {
     }  
 };
 
-promptUser() 
+promptUser();
 
 function promptUser() {
     let gridNum = prompt("heyo choose a number between 1-100...");
@@ -37,3 +40,8 @@ function promptUser() {
         grid(gridNum);
     }
 };
+
+function clear() {
+    container.innerHTML = '';
+    promptUser();
+}
