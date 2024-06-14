@@ -27,7 +27,8 @@ promptUser()
 function promptUser() {
     let gridNum = prompt("heyo choose a number between 1-100...");
     parseInt(gridNum);
-    if(gridNum == "" || !(gridNum)) {
+    if(gridNum == "" || isNaN(gridNum)) {
+        alert("U should have typed in a number!");
         grid(16);
     } else if(gridNum < 1 || gridNum > 100) {
         alert("You can't choose that! :(");
