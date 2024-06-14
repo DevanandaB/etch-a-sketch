@@ -1,7 +1,7 @@
 .container {
     border: 2px solid black;
-    width: 950px;
-    height: 680px;
+    width: 980px;
+    height: 690px;
     display: flex;
     flex-wrap: wrap;
 }
